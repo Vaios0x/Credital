@@ -1,0 +1,91 @@
+@import './tokens.styl'
+
+/* Base */
+:root
+  color-scheme light
+
+html, body, #root
+  height 100%
+
+body
+  margin 0
+  font-family ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, 'Apple Color Emoji', 'Segoe UI Emoji'
+  color textColor
+  background bgColor
+  display block
+
+a
+  color inherit
+  text-decoration none
+  &:focus-visible
+    outline 2px solid primaryColor
+    outline-offset 2px
+
+button
+  font inherit
+  &:focus-visible
+    outline 2px solid primaryColor
+    outline-offset 2px
+
+.container
+  width 100%
+  margin 0 auto
+  padding spacing(4)
+  @media (min-width: 768px)
+    padding spacing(6)
+
+.card
+  background surfaceColor
+  border 1px solid borderColor
+  border-radius radiusMedium
+  box-shadow shadowSm
+  padding spacing(5)
+
+.btn
+  display inline-flex
+  align-items center
+  gap spacing(2)
+  padding spacing(3) spacing(4)
+  border-radius radiusSmall
+  border 1px solid borderColor
+  background surfaceColor
+  cursor pointer
+  transition all .15s ease
+  &:hover
+    box-shadow shadowMd
+  &:active
+    transform translateY(1px)
+
+.btn-primary
+  background primaryColor
+  color white
+  border none
+  &:hover
+    background primaryColorDark
+
+.badge
+  display inline-block
+  padding 2px 8px
+  border-radius 9999px
+  font-size 12px
+  border 1px solid borderColor
+
+.grid
+  display grid
+  gap spacing(4)
+
+.grid-2
+  grid-template-columns repeat(2, minmax(0, 1fr))
+
+.grid-3
+  grid-template-columns repeat(3, minmax(0, 1fr))
+
+@media (max-width: 900px)
+  .grid-2, .grid-3
+    grid-template-columns 1fr
+
+/* Hero spacing for home cards */
+.home-grid
+  margin-top spacing(4)
+
+

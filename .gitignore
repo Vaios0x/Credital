@@ -1,0 +1,16 @@
+# Root
+node_modules/
+*.log
+.DS_Store
+.env
+
+# Vite build outputs
+apps/web/dist/
+apps/web/node_modules/
+
+# Editor
+.idea/
+.vscode/
+
+# temp
+apps/web/.tmp/
