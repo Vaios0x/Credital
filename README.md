@@ -1,6 +1,25 @@
 # Credital — Plataforma de Financiamiento para PYMES con RWA
 
-Credital es una plataforma DeFi que conecta PYMES mexicanas con inversionistas globales. Las PYMES tokenizan sus cuentas por cobrar como Activos del Mundo Real (RWA) y obtienen financiamiento ágil y transparente; los inversionistas acceden a rendimientos competitivos respaldados por flujos reales.
+One-liner: Financiamiento ágil para PYMES mexicanas tokenizando facturas (RWA) y conectándolas con capital global en una plataforma segura y transparente.
+
+Problema: 8 de cada 10 PYMES en México no acceden a crédito competitivo; procesos lentos, requisitos rígidos y costos altos frenan el crecimiento.
+
+Solución: Marketplace de dos lados. PYMES suben facturas, un motor de riesgo (IA) evalúa y, si procede, se tokeniza el derecho de cobro (ERC-721). Inversionistas fondean pools (ERC-20) y capturan rendimiento con transparencia on-chain y oráculos off-chain.
+
+Por qué ahora: Nearshoring, auge de RWA y madurez de infraestructura Web3 (Arbitrum/Polygon, Chainlink) habilitan una distribución de crédito más eficiente.
+
+Producto (MVP):
+- Portal PYMES: subida de CFDI, onboarding KYB, estatus de facturas (Pendiente, Financiada, Pagada).
+- Portal Inversionistas: pools por perfil de riesgo/industria, métricas de rendimiento, depósitos/retiros.
+- Orquestación: cuando se aprueba una factura, se prepara la acuñación del NFT y el fondeo desde el pool.
+
+Modelo de negocio: tarifa de originación (1–2%), diferencial de tasa (spread) y futura tarifa de gestión institucional.
+
+Moat (defensas): datos propietarios de comportamiento (CFDI, pagos), scoring conservador y partnerships con cámaras/empresas ancla; cumplimiento y trazabilidad aumentan switching costs.
+
+Go-To-Market: pilotos con cámaras de comercio y agregadores de facturas; enfoque en industrias con deudores AA; referidos de contadores/ERP.
+
+Riesgos y mitigación: fondo de primeras pérdidas, segregación custodial, auditorías de seguridad, sandbox regulatorio CNBV, contratos ejecutables con respaldo legal.
 
 ## Tecnologías
 
@@ -82,6 +101,12 @@ VITE_API_BASE_URL=http://localhost:8000
 - Motor de scoring (FastAPI) y orquestación on-chain
 - Integración Web3 (depósitos/withdraw a pools)
 - UI de pools con métricas y performance
+- Auditoría de contratos y pruebas de estrés
+- Piloto con empresas ancla y medición de cohortes
+
+Señales/Métricas (fase temprana): tiempo de originación (<72h), % aprobación conservadora, default 90d, TVL y APY histórico, CAC/LTV por segmento.
+
+Cumplimiento y seguridad Web3: oráculos (Chainlink) para eventos de pago, segregación de roles on-chain, controles de acceso, logs inmutables, auditorías periódicas y transparencia de tarifas.
 
 ## Licencia
 
